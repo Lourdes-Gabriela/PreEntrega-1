@@ -9,8 +9,15 @@ function sumarTotalSueldos () {
     let feriadoCobraDoble = (valorHora * 8) * feriados;
     let totalSueldos = (totalSueldoMensual + feriadoCobraDoble) * cantidadDeSueldos;
 
-    alert("El total a pagar de sueldos mas feriados incluidos es de " + totalSueldos)
-    console.log ("El total a pagar de sueldos mas feriados incluidos es de " + totalSueldos);
+    if (feriados == 0) {
+        let bono = 5000;
+        totalSueldos = (totalSueldoMensual + bono) * cantidadDeSueldos;
+        alert("El total a pagar de sueldos mas un bono incluido es de " + totalSueldos);
+    } else {
+        alert("El total a pagar de sueldos mas feriados incluidos es de " + totalSueldos);
+    }
+
+    console.log ("El total a pagar es de " + totalSueldos);
 
 }
 sumarTotalSueldos()
